@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamsi's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Custom style for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-xl font-bold">Vamsi's Portfolio</h1>
+            <div>
+                <a href="#about" class="text-gray-300 hover:text-white mx-4">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-white mx-4">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-white mx-4">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-white mx-4">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-pink-300 to-pink-600 h-screen flex flex-col justify-center items-center text-center text-white relative">
+        <img src="vamsi.png" alt="Vamsi's Profile Picture" class="rounded-full w-96 h-96 mb-4 border"> <!-- Minimal Border Added -->
+        <h1 class="text-5xl font-bold">Hello, I'm Vamsi</h1>
+        <p class="mt-4 text-lg">A passionate Cyber Security Student | 3rd Year B.Tech</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-r from-pink-200 to-pink-400"> <!-- Light Pink -->
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-4">About Me</h2>
+            <p class="mb-4">I am a 3rd-year B.Tech student specializing in Cyber Security. I possess a solid foundation in programming and security principles, along with strong communication skills and leadership qualities. I'm eager to learn and tackle new challenges in the field.</p>
+            <p class="mb-4">Currently, I am working as the Joint Secretary of the Tirupati branch of the 'We Are With You Charitable Trust,' a non-NGO, where I actively volunteer and contribute to community service initiatives.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gradient-to-r from-pink-300 to-pink-500"> <!-- Medium Pink -->
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-4">Skills</h2>
+            <ul class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <li class="bg-white p-4 rounded shadow">Python</li>
+                <li class="bg-white p-4 rounded shadow">Java</li>
+                <li class="bg-white p-4 rounded shadow">C Programming</li>
+                <li class="bg-white p-4 rounded shadow">HTML & CSS</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gradient-to-r from-pink-400 to-pink-700"> <!-- Darker Pink -->
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-4">Projects</h2>
+            <ul class="list-disc pl-5">
+                <li class="mb-2">Seed Ball Community Service Project</li>
+                <li class="mb-2">College DBMS Project with SQL</li>
+                <li class="mb-2">Personal Portfolio Website</li>
+                <li class="mb-2">Meme Page on Instagram</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-r from-pink-500 to-pink-800"> <!-- Darkest Pink -->
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to reach out via email: <a href="mailto:vamsianiyadav143@gmail.com" class="text-blue-500">vamsianiyadav143@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2024 Vamsi. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        $(document).ready(function() {
+            $('a[href^="#"]').on('click', function(event) {
+                var target = $($(this).attr('href'));
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
